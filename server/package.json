@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "photo uploader app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suraj-raj01/PhotoUploader_Cloudinary.git"
+  },
+  "author": "SURAJ KUMAR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suraj-raj01/PhotoUploader_Cloudinary/issues"
+  },
+  "homepage": "https://github.com/suraj-raj01/PhotoUploader_Cloudinary#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.13.0"
+  }
+}
