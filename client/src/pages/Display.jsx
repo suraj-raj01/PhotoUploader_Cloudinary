@@ -14,6 +14,7 @@ const Display = () => {
     try {
       const response = await axios.get(API);
       setMydata(response.data);
+      console.log(mydata);
     } catch (error) {
       console.log(error);
     }
@@ -28,7 +29,6 @@ const Display = () => {
     try {
       const res = await axios.post(API,{id:id})
       setShoImg(res.data)
-      console.log(showImg)
     } catch (error) {
       console.log(error);
     }
@@ -39,7 +39,7 @@ const Display = () => {
     document.getElementById("showbigImage").style.display="none"
   }
 
-  const res = mydata.map((key)=>{
+  const ans = mydata.map((key)=>{
     return(
       <>
           <img src={key.images} alt="" height='265px' width='420px' onClick={()=>{showImage(key._id)}}/>
@@ -52,7 +52,7 @@ const Display = () => {
       {/* <h1>Display</h1> */}
       <div id="photos">
         <div id="img">
-          {res}
+          {ans}
         </div>
       </div>
         <div id="showbigImage">

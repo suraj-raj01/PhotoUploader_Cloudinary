@@ -1,9 +1,9 @@
-const UploadImageModel = require("../models/photoUploadModel")
+const photoUploadModel = require("../models/photoUploadModel");
 
 async function uploadPhoto(req,res){
     const {image} = req.body;
     try {
-        const Data = new UploadImageModel({
+        const Data = new photoUploadModel({
             images:image
         })
         Data.save();
@@ -15,8 +15,8 @@ async function uploadPhoto(req,res){
 
 async function displyPhoto(req,res){
     try {
-        const Data = await UploadImageModel.find();
-        return res.status(201).json(Data);
+        const Data = await photoUploadModel.find();
+        return res.status(200).json(Data);
     } catch (error) {
         return res.status(400).json(error);
     }
@@ -25,7 +25,7 @@ async function displyPhoto(req,res){
 async function showImage(req,res){
     const{id} = req.body;
     try {
-        const Data = await UploadImageModel.findById(id);
+        const Data = await photoUploadModel.findById(id);
         return res.status(200).json(Data);
     } catch (error) {
         return res.status(400).json(error);
