@@ -17,7 +17,7 @@ const InsertPhoto = () => {
     formData.append("file", filename);
     formData.append("upload_preset", "myphotos");
     formData.append("cloud_name", "dtrpmtbie");
-    let cloudinary_api = "https://api.cloudinary.com/v1_1/dtrpmtbie/image/upload";
+    let cloudinary_api = "https://api.cloudinary.com/v1_1/dtrpmtbie/auto/upload";
     let API = `${api}/upload/uploadphoto`;
     try {
       const response = await axios.post(cloudinary_api,formData);
