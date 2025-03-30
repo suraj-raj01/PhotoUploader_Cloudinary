@@ -42,7 +42,7 @@ const Display = () => {
   const ans = mydata.map((key)=>{
     return(
       <>
-          <img src={key.images} alt="" height='265px' width='420px' onClick={()=>{showImage(key._id)}}/>
+          <img src={key.images} alt="" height='255px' width='32%' onClick={()=>{showImage(key._id)}}/>
       </>
     )
   })
@@ -61,7 +61,7 @@ const Display = () => {
         </div>
         <div id="photo">
          {/* <span>{showImg.uploadedAt}</span> */}
-          <img src={showImg.images} alt="" height='650px'/>
+          <img src={showImg.images} alt="" height='640px'/>
         </div>
         </div>
     </div>

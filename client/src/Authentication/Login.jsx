@@ -1,15 +1,15 @@
 import React from "react";
-import { Button, Checkbox, Form, Input } from "antd";
-const onFinish = (values) => {
-  console.log("Success:", values);
-};
-const onFinishFailed = (errorInfo) => {
-  console.log("Failed:", errorInfo);
-};
+// import { Button, Checkbox, Form, Input } from "antd";
+// const onFinish = (values) => {
+//   console.log("Success:", values);
+// };
+// const onFinishFailed = (errorInfo) => {
+//   console.log("Failed:", errorInfo);
+// };
 const Login = () => {
   return (
     <div>
-      <Form id="loginform"
+      {/* <Form id="loginform"
         name="basic"
         labelCol={{ span: 7 }}
         wrapperCol={{ span: 14 }}
@@ -45,7 +45,7 @@ const Login = () => {
             Submit
           </Button>
         </Form.Item>
-      </Form>
+      </Form> */}
     </div>
   );
 };

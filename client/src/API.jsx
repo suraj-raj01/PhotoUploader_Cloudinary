@@ -1,4 +1,4 @@
 // const api = "http://localhost:8000"
-const api = "https://photouploader-cloudinary.onrender.com"
+const api = "https://photo-uploader-cloudinary.vercel.app"
 
 export default api;
