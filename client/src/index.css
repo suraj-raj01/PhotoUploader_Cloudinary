@@ -1,75 +1,94 @@
-*{
+/* Global styles */
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-#navbar{
+
+/* Navbar */
+#navbar {
   height: 9vh;
   box-shadow: 0 0 10px #ddd7d7;
   position: sticky;
-  top: 0;
+  top: 0px;
 }
 
-#outlet{
+/* Main content container */
+#outlet {
   width: 85%;
   padding: 20px 0px;
   margin: auto;
 }
 
-#home-outlet{
+/* Home outlet */
+#home-outlet {
   margin-top: -40px;
   margin-left: 300px;
 }
 
-#form input{
+/* Form inputs */
+#form input {
   padding: 10px;
-  border: 1px solid #ddd7d7;
-  background-color: #ddd7d7;
+  /* border: 1px solid #ddd7d7; */
+  box-shadow: 0 0 5px #ddd7d7;
+  border-radius: 5px;
+  background-color: #fff;
 }
-#submit-button{
+
+/* Submit button */
+#submit-button {
   margin-top: 10px;
   padding: 6px 15px;
   background-color: white;
   color: #078907;
   font-weight: 500;
   border: 1px solid;
-  transition: .6s;
+  border-radius: 5px;
+  transition: 0.6s;
 }
-#submit-button:hover{
-  transition: .6s;
+
+#submit-button:hover {
+  transition: 0.6s;
   background-color: #078907;
   color: white;
 }
-#photos{
+
+/* Photos container */
+#photos {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: start;
-}
-#photos #img{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: start;
-  gap: 15px 15px;
-}
-#photos #img img{
-  transition: .8s;
-}
-#photos #img img:hover{
-  transition: .8s;
-  transform: scale(.96);
 }
 
-#loginform{
+#photos #img {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 15px;
+}
+
+#photos #img img {
+  transition: 0.8s;
+}
+
+#photos #img img:hover {
+  transition: 0.8s;
+  transform: scale(0.96);
+}
+
+/* Login form */
+#loginform {
   margin: 100px auto;
   box-shadow: 0 0 5px #ddd7d7;
   border-radius: 8px;
   padding: 20px;
 }
 
-#showbigImage{
-  position:fixed;
+/* Full-screen image viewer */
+#showbigImage {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -78,18 +97,185 @@
   background-color: #ffffff;
   display: none;
 }
-#showbigImage #photo{
+
+#showbigImage #photo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   object-fit: fill;
 }
-#showbigImage #photo img{
+
+#showbigImage #photo img {
   object-fit: cover;
 }
-#showbigImage #close{
+
+#showbigImage #close {
   font-size: 25px;
   cursor: pointer;
   padding: 0px 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  #outlet {
+    width: 90%;
+  }
+
+  #home-outlet {
+    margin-left: 50px;
+  }
+  #form input{
+    width: 60%;
+  }
+
+  #photos #img {
+    gap: 10px;
+  }
+
+  #photos #img img {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  #navbar {
+    height: 8vh;
+  }
+
+  #outlet {
+    width: 95%;
+  }
+
+  #home-outlet {
+    margin-left: 0;
+  }
+
+  #form input{
+    margin-top: 50px;
+    width: 43%;
+  }
+
+  #submit-button {
+    width: 43%;
+  }
+
+  #photos {
+    justify-content: center;
+  }
+
+  #photos #img img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  #loginform {
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  #showbigImage #photo img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    height: 10vh;
+  }
+
+  #outlet {
+    width: 100%;
+    padding: 10px 0px;
+  }
+
+  #home-outlet {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  #form input,
+  #submit-button {
+    width: 50%;
+  }
+  #form input{
+    margin-top: 10px;
+  }
+
+  #photos #img {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  #photos #img img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+  }
+
+  #loginform {
+    width: 100%;
+    margin: 30px auto;
+  }
+
+  #showbigImage #photo img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  #navbar {
+    height: 12vh;
+  }
+
+  #submit-button {
+    width: 100%;
+    padding: 8px 20px;
+  }
+
+  #loginform {
+    padding: 15px;
+  }
+
+  #form input{
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  #photos {
+    gap: 5px;
+  }
+
+  #photos #img img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #showbigImage #close {
+    font-size: 20px;
+    padding: 0px 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  #navbar {
+    height: 14vh;
+  }
+
+  #submit-button {
+    padding: 6px 12px;
+  }
+
+  #photos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #showbigImage #close {
+    font-size: 18px;
+    padding: 0px 10px;
+  }
 }
