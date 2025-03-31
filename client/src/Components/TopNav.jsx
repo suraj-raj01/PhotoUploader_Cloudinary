@@ -12,7 +12,7 @@ const TopNav = () => {
 
 <Navbar expand="lg" className="bg-body-tertiary">
       <Container >
-        <Navbar.Brand href="#">PhotoUploader</Navbar.Brand>
+        <Navbar.Brand as={Link} to="home">PhotoUploader</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
